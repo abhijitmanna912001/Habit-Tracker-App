@@ -32,8 +32,12 @@ export function AuthProvider({
     try {
       const session = await account.get();
       setUser(session);
-    } catch (error) {
-      console.log("Failed to fetch user session:", error);
+    } catch (error: any) {
+      if (error?.code !== 401) {
+        console.error("Unexpected Appwrite Error:", error.message);
+      }
+
+      // Always set user to null if any error occurs
       setUser(null);
     } finally {
       setIsLoadingUser(false);
