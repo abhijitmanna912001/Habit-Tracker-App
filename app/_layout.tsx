@@ -1,5 +1,7 @@
 import { AuthProvider, useAuth } from "@/lib/auth-context";
 import { Redirect, Stack, useSegments } from "expo-router";
+import { PaperProvider } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 function RouteHandler() {
   const segments = useSegments();
@@ -29,7 +31,11 @@ function RouteHandler() {
 export default function RootLayout() {
   return (
     <AuthProvider>
-      <RouteHandler />
+      <PaperProvider>
+        <SafeAreaProvider>
+          <RouteHandler />
+        </SafeAreaProvider>
+      </PaperProvider>
     </AuthProvider>
   );
 }
