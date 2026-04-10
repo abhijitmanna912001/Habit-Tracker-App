@@ -1,50 +1,111 @@
-# Welcome to your Expo app 👋
+# Habit Tracker 📅🔥
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern **Habit Tracker mobile app** built with **React Native (Expo)** and **Appwrite** that helps users build and maintain positive habits through streak tracking and progress insights.
 
-## Get started
+The app allows users to create habits, track daily progress, view streak statistics, and stay consistent with their goals.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Features
 
-2. Start the app
+- 🔐 **User Authentication**
+  - Secure signup and login using Appwrite Auth
 
-   ```bash
-   npx expo start
-   ```
+- 📝 **Create Habits**
+  - Add habits with title, description, and frequency
 
-In the output, you'll find options to open the app in a
+- ✅ **Habit Completion**
+  - Mark habits as completed with swipe gestures
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- 🗑 **Delete Habits**
+  - Swipe to remove habits easily
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- 🔥 **Streak Tracking**
+  - Automatic calculation of:
+    - Current streak
+    - Best streak
+    - Total completions
 
-## Get a fresh project
+- 🏆 **Leaderboard**
+  - View top streaks across your habits
 
-When you're ready, run:
+- ⚡ **Realtime Updates**
+  - Appwrite realtime subscriptions keep UI instantly synced
 
-```bash
-npm run reset-project
-```
+- 📱 **Modern UI**
+  - Built with React Native Paper and smooth gesture interactions
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📱 Download APK
 
-To learn more about developing your project with Expo, look at the following resources:
+You can download and install the latest APK here:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+➡️ **[Download APK](https://expo.dev/accounts/abhi912001/projects/habit-tracker/builds/8f65aefc-9b7c-4310-917c-971631701b6a)**
 
-## Join the community
+> Enable **Install from unknown sources** on Android before installing.
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🛠 Tech Stack
+
+### Frontend
+
+- React Native
+- Expo
+- Expo Router
+- React Native Paper
+- React Native Gesture Handler
+
+### Backend
+
+- Appwrite (Authentication, Database, Realtime)
+
+### Build & Deployment
+
+- Expo EAS Build
+- Android APK / AAB
+
+---
+
+## 📊 Core Functionalities
+
+- Habit creation and management
+- Swipe gestures for quick actions
+- Realtime database updates
+- Habit streak analytics
+- Leaderboard for best streaks
+- Clean and responsive mobile UI
+
+---
+
+## ⚙️ Local Development
+
+Clone the repository:
+
+````bash
+git clone https://github.com/yourusername/habit-tracker.git
+cd habit-tracker
+
+Install dependencies:
+npm install
+
+Start the development server:
+npx expo start
+
+🔧 Environment Variables
+Create a .env file and add the following variables:
+
+EXPO_PUBLIC_APPWRITE_ENDPOINT=
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=
+EXPO_PUBLIC_APPWRITE_PLATFORM=
+EXPO_PUBLIC_DB_ID=
+EXPO_PUBLIC_COLLECTION_ID=
+EXPO_PUBLIC_COMPLETION_COLLECTION_ID=
+
+📦 Build
+Generate APK for testing:
+eas build --platform android --profile preview
+
+Generate AAB for Play Store:
+eas build --platform android --profile production
